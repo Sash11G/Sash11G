@@ -17,7 +17,7 @@
 
 body
 {
-    color: #ededed;
+    color: var(--main-color);
     background-color: black;
 
 }
