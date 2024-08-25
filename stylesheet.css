@@ -77,6 +77,6 @@ body
     width: 400px; /* Adjust the width as needed */
     height: 400px; /* Adjust the height as needed */
     border-radius: 50%; /* To make it round, adjust the border-radius accordingly */
-     /* Ensures the image covers the entire space */
+    /* Ensures the image covers the entire space */
     /* Add any additional styling as needed */
 }
