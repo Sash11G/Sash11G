@@ -602,56 +602,71 @@ span{
 }
 
 
-@media(max-width: 1258px){
-    html{
-        font-size: 55%;
+/* Media Query for Large Tablets and Small Desktops */
+@media (max-width: 1258px) {
+    html {
+        font-size: 55%; /* Scale down font size for better readability on smaller screens */
     }
-    .services-container{
-        padding-bottom: 7rem;
-        grid-template-columns: repeat(2,1fr);
-        margin: 0 5rem;
+
+    .services-container {
+        padding-bottom: 7rem; /* Adjust bottom padding */
+        grid-template-columns: repeat(2, 1fr); /* Two columns layout for services */
+        margin: 0 5rem; /* Horizontal margins */
     }
 }
-@media(max-width: 991px){
-    header{
-        padding: 2rem 3%;
+
+/* Media Query for Tablets */
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%; /* Reduce padding for a more compact header */
     }
-    section{
-        padding: 10rem 3% 2rem;
+
+    section {
+        padding: 10rem 3% 2rem; /* Adjust section padding for better fit */
     }
-    .timeline-items::before{
-        left: 7px;
+
+    .timeline-items::before {
+        left: 7px; /* Adjust line positioning in the timeline */
     }
-    .timeline-item:nth-child(odd){
+
+    .timeline-item:nth-child(odd) {
         padding-right: 0;
-        text-align: left;
+        text-align: left; /* Align timeline content to the left */
     }
-    
+
     .timeline-item:nth-child(even),
-    .timeline-item:nth-child(odd){
-        padding-left: 37px;
+    .timeline-item:nth-child(odd) {
+        padding-left: 37px; /* Consistent padding for timeline items */
     }
-    .timeline-dot{
-        left: 0;
+
+    .timeline-dot {
+        left: 0; /* Position dot for alignment */
     }
-    .services{
-        padding-bottom: 7rem;
+
+    .services {
+        padding-bottom: 7rem; /* Consistent padding for services section */
     }
-    .testimonials .wrapper{
-        grid-template-columns: repeat(1,1fr);
+
+    .testimonials .wrapper {
+        grid-template-columns: repeat(1, 1fr); /* Single column for testimonials on smaller screens */
     }
+
     .contact form {
-        flex-direction: column;
+        flex-direction: column; /* Stack form elements vertically */
     }
-    .footer{
-        padding: 2rem 3%;
+
+    .footer {
+        padding: 2rem 3%; /* Compact footer padding */
     }
 }
-@media(max-width: 895px){
-    #menu-icon{
-        display: block;
+
+/* Media Query for Mobile Devices */
+@media (max-width: 895px) {
+    #menu-icon {
+        display: block; /* Show the hamburger menu icon */
     }
-    .navbar{
+
+    .navbar {
         position: absolute;
         top: 100%;
         right: 0;
@@ -662,45 +677,60 @@ span{
         border-bottom-left-radius: 2rem;
         border-left: 2px solid #00ffee;
         border-bottom: 2px solid #00ffee;
-        display: none;
+        display: none; /* Hide navbar by default on mobile */
+        flex-direction: column; /* Stack navbar links vertically */
+        transition: visibility 0s, opacity 0.3s ease-in-out; /* Smooth transition */
+        z-index: 5; /* Ensure navbar is above other elements */
     }
-    .navbar a{
-        display: block;
+
+    /* Display the navbar when the 'active' class is added */
+    .navbar.active {
+        display: flex; /* Show navbar when active */
+        visibility: visible; /* Ensure navbar is visible */
+        opacity: 1; /* Fully visible */
+    }
+
+    .navbar a {
+        display: block; /* Navbar links stacked vertically */
         font-size: 2rem;
         margin: 3rem 0;
         color: white;
     }
-    .home{
-        flex-direction: column-reverse;
-        margin: 5rem 4rem;
+
+    .home {
+        flex-direction: column-reverse; /* Reverse home section layout */
+        margin: 5rem 4rem; /* Adjust margin */
     }
 
-    .home-content h3{
-        font-size: 2.6rem;
+    .home-content h3 {
+        font-size: 2.6rem; /* Responsive font size */
     }
-    .home-content h1{
+
+    .home-content h1 {
         font-size: 7rem;
         margin-top: 0;
-    
     }
-    .home-content p{
+
+    .home-content p {
         font-size: 1.8rem;
         max-width: 600px;
         margin: 0 auto;
     }
-    .home-img img{
-        width: 70vw;
 
-
+    .home-img img {
+        width: 70vw; /* Responsive image size */
     }
-    .services h2{
+
+    .services h2 {
         margin-bottom: 3rem;
     }
-    .services-container{
-        grid-template-columns: repeat(1,1fr);
+
+    .services-container {
+        grid-template-columns: repeat(1, 1fr); /* Single column for services on mobile */
         margin: auto 3rem;
     }
-    .service-box .service-info{
+
+    .service-box .service-info {
         display: flex;
         flex-direction: column;
         text-align: left;
@@ -709,40 +739,46 @@ span{
         align-items: baseline;
         padding: 3rem 2.5rem;
     }
-    .service-info h4{
+
+    .service-info h4 {
         font-size: 2.5rem;
         font-weight: 800;
         line-height: 1;
         padding-bottom: 2rem;
     }
-    .service-info p{
+
+    .service-info p {
         font-size: 1.6rem;
         font-weight: 600;
         max-height: 100px;
         line-height: 1.7;
         margin: auto;
     }
-    
-    .testimonials h2{
+
+    .testimonials h2 {
         font-size: 6rem;
     }
-    .testimonials .testimonial-item h2{
+
+    .testimonials .testimonial-item h2 {
         font-size: 3rem;
     }
-    .contact h2{
+
+    .contact h2 {
         font-size: 6rem;
     }
-    .footer .social{
+
+    .footer .social {
         padding-top: 3rem;
     }
-    .footer .list{
+
+    .footer .list {
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr); /* Single column for footer links */
         gap: 4rem;
         padding-top: 3rem;
     }
-    .footer .copyright{
+
+    .footer .copyright {
         margin-bottom: 3rem;
     }
-
 }
