@@ -48,7 +48,7 @@ input, textarea {
     padding: 2rem 5%;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
-    position: relative;
+    position: fixed;
     z-index: 1000;
     /*
     position: relative;
@@ -72,6 +72,15 @@ input, textarea {
     cursor: pointer;
     transition: 0.3s ease;
     white-space: nowrap;
+
+    /* Prevent text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    /* Remove outline on focus */
+    outline: none;
 
 }
 
@@ -111,6 +120,15 @@ input, textarea {
     color: #00ffee;
     display: none;
     cursor: pointer;
+
+    /* Prevent highlight when clicked */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    /* Remove outline on focus */
+    outline: none;
 }
 
 section {
