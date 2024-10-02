@@ -129,7 +129,7 @@ span{
 
 .home-img img {
     position: relative;
-    top: 3rem;
+    top: 1rem;
     width: 32vw;
     border-radius: 50%;
     box-shadow: 0 0 25px #00ffee;
@@ -145,9 +145,9 @@ span{
 }
 
 .home-content p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 1.4;
     max-width: 1000px;
 
 }
@@ -239,7 +239,7 @@ span{
     background-color: #080808;
     position: absolute;
     width: calc(100% + 8px);
-    height: 100%;
+    height: 102%;
     border-left: 3px solid #080808;
     right: -8px;
     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
@@ -256,16 +256,20 @@ span{
         content: "Full Stack Developer";
     }
     21%, 40% {
-        content: "Web Designer";
+        content: "C Programmer";
     }
     41%, 60% {
-        content: "UI / UX Designer";
+        content: "Game Developer";
     }
     61%, 80% {
+<<<<<<< Updated upstream
         content: "Data scientist";
+=======
+        content: "Android Developer";
+>>>>>>> Stashed changes
     }
     81%, 100% {
-        content: "Software Tester";
+        content: "IoT Programmer";
     }
 }
 
@@ -531,7 +535,7 @@ span{
     background: #131313;
     border-radius: 2rem;
     border: 2px solid #00ffee;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     resize: none;
 }
 
