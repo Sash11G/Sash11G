@@ -23,7 +23,22 @@ body
     color: #ededed;
     background-color: #080808;
 
+    /* Disable text selection globally */
+    -webkit-user-select: none; /* Disable text selection in Safari/Chrome */
+    -moz-user-select: none;    /* Disable text selection in Firefox */
+    -ms-user-select: none;     /* Disable text selection in IE/Edge */
+    user-select: none;         /* Disable text selection for modern browsers */
+
 }
+
+/* Allow text selection in input fields and text areas */
+input, textarea {
+    -webkit-user-select: text; 
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
 
 .header {
     display: flex;
@@ -56,6 +71,7 @@ body
     font-weight: 800;
     cursor: pointer;
     transition: 0.3s ease;
+    white-space: nowrap;
 
 }
 
@@ -70,7 +86,7 @@ body
 }
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
 }
@@ -152,6 +168,8 @@ span{
     box-shadow: 0 0 25px #00ffee;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    outline: none; /* Remove focus outline */
+    -webkit-tap-highlight-color: transparent; /* Remove blue highlight on mobile */
 }
 
 .home-img img:hover {
