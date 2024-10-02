@@ -121,14 +121,14 @@ input, textarea {
     display: none;
     cursor: pointer;
 
-    /* Prevent highlight when clicked */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    
-    /* Remove outline on focus */
-    outline: none;
+        /* Prevent highlight when clicked */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        
+        /* Remove outline on focus */
+        outline: none;
 }
 
 section {
@@ -715,7 +715,7 @@ span{
 
     /* Adjust the page content to account for the fixed header */
     body {
-        padding-top: 80px; /* Adjust this value based on your header height */
+        padding-top: 3rem; /* Adjust this value based on your header height */
     }
     #menu-icon {
         display: block;
@@ -751,7 +751,8 @@ span{
     }
     .home{
         flex-direction: column-reverse;
-        margin: 5rem 4rem;
+        margin: 0rem 4rem;
+        gap: 5rem;
     }
 
     .home-content h3{
@@ -759,19 +760,17 @@ span{
     }
     .home-content h1{
         font-size: 7rem;
-        margin-top: 0;
-    
     }
     .home-content p{
-        font-size: 1.8rem;
+        font-size: 2rem;
         max-width: 600px;
         margin: 0 auto;
     }
     .home-img img{
         width: 70vw;
-
-
     }
+
+
     .services h2{
         margin-bottom: 3rem;
     }
@@ -795,7 +794,7 @@ span{
         padding-bottom: 2rem;
     }
     .service-info p{
-        font-size: 1.6rem;
+        font-size: 2rem;
         font-weight: 600;
         max-height: 100px;
         line-height: 1.7;
