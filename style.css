@@ -26,7 +26,17 @@ body
 }
 
 .header {
-    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 5%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1000;
+    /*
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -37,6 +47,7 @@ body
     justify-content: space-between;
     align-items: center;
     z-index: 5;
+    */
 }
 
 .logo {
@@ -57,7 +68,12 @@ body
     text-shadow: 0 0 25px #00ffee;
 
 }
-
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
 .navbar a {
     font-size: 1.8rem;
     color: white;
@@ -78,6 +94,7 @@ body
     font-size: 3.6rem;
     color: #00ffee;
     display: none;
+    cursor: pointer;
 }
 
 section {
@@ -651,27 +668,50 @@ span{
     }
 }
 @media(max-width: 895px){
-    #menu-icon{
+    /* Make the header fixed on mobile screens */
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Ensure it stays on top of everything */
+    }
+
+    /* Adjust the page content to account for the fixed header */
+    body {
+        padding-top: 80px; /* Adjust this value based on your header height */
+    }
+    #menu-icon {
         display: block;
     }
-    .navbar{
+
+    .navbar {
+        display: none; /* Hide navbar by default */
         position: absolute;
         top: 100%;
-        right: 0;
-        width: 50%;
-        padding: 1rem 3%;
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(20px);
-        border-bottom-left-radius: 2rem;
-        border-left: 2px solid #00ffee;
-        border-bottom: 2px solid #00ffee;
-        display: none;
+        left: 0;
+        width: 100%; /* Make navbar take the full width */
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 2rem 0;
+        z-index: 1000; /* Ensure it is above the home image */
     }
-    .navbar a{
-        display: block;
+
+    /* Show navbar when burger is clicked */
+    .navbar.show {
+        display: flex;
+    }
+
+    .navbar a {
         font-size: 2rem;
-        margin: 3rem 0;
+        margin: 1.5rem 0;
         color: white;
+    }
+
+    /* Style for transforming burger icon to X */
+    .bx-x {
+        font-size: 3.6rem;
+        color: #00ffee;
     }
     .home{
         flex-direction: column-reverse;

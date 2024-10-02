@@ -1,0 +1,1 @@
+I used formspree for the contact form
