@@ -778,14 +778,24 @@ span{
         grid-template-columns: repeat(1,1fr);
         margin: auto 3rem;
     }
+    .service-box {
+        /* Ensure the container has a set size or respects the content size */
+        width: 100%; /* Ensure it takes the full available width */
+        max-width: 300px; /* Set a maximum width for the box (adjust as needed) */
+        height: auto; /* Allow height to adjust based on content */
+        max-height: 400px;
+        overflow: hidden; /* Prevent the content from spilling out */
+        text-overflow: ellipsis;
+    }
     .service-box .service-info{
         display: flex;
         flex-direction: column;
         text-align: left;
-        max-height: 200px;
+        max-height: none;
         justify-content: left;
         align-items: baseline;
         padding: 3rem 2.5rem;
+        overflow: visible;
     }
     .service-info h4{
         font-size: 2.5rem;
@@ -796,9 +806,10 @@ span{
     .service-info p{
         font-size: 2rem;
         font-weight: 600;
-        max-height: 100px;
+        max-height: none;
         line-height: 1.7;
-        margin: auto;
+        margin: 0;
+        white-space: normal;
     }
     
     .testimonials h2{
